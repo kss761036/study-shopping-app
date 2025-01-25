@@ -30,19 +30,19 @@ const ProductCreateForm = () => {
           explanation,
           price,
         });
-      }}
-    >
+      }}>
       <input
+        className="input-style"
         onChange={(event) => setName(event.target.value)}
         type="text"
         placeholder="상품의 이름"
       />
-      <input
+      <textarea
+        className="input-style h-20"
         onChange={(event) => setExplanation(event.target.value)}
-        type="text"
-        placeholder="상품 설명"
-      />
+        placeholder="상품 설명"></textarea>
       <input
+        className="input-style"
         onChange={(event) => setPrice(parseInt(event.target.value, 10))}
         type="number"
         placeholder="상품 가격"

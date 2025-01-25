@@ -7,6 +7,11 @@ const ProductList = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
 
   const handleDelete = (id: string) => {
+    const isConfirmed = window.confirm("정말 삭제하시겠습니까?");
+
+    if (!isConfirmed) {
+      return; // 취소하면 아무 작업도 하지 않음
+    }
     fetch(`/product/${id}`, {
       method: "DELETE",
     }).then((response) => {
@@ -41,7 +46,7 @@ const ProductList = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className="flex flex-wrap">
       {products.map((product) => (
         <ProductItem
           key={product.id}
