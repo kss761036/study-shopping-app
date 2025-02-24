@@ -15,7 +15,9 @@ root.render(
       <div className="font-pre mt-20">
         <header className="header h-20 fixed top-0 left-0 z-50 w-full">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <img className="h-16" src={logo} alt="로고" />
+            <Link to="/">
+              <img className="h-16" src={logo} alt="로고" />
+            </Link>
           </div>
           <div className="max-w-7xl w-full mx-auto h-full flex items-center justify-end">
             <Link
